@@ -1,0 +1,6 @@
+thorntail:
+  http:
+    port: 8081
+  management:
+    http:
+      port: 9991
