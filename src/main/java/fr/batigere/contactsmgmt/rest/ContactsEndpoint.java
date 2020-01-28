@@ -1,6 +1,7 @@
 package fr.batigere.contactsmgmt.rest;
 
 import fr.batigere.contactsmgmt.rest.dtos.Contact;
+import org.eclipse.microprofile.opentracing.Traced;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.*;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @ApplicationScoped
 @Path("/contacts")
+@Traced
 public class ContactsEndpoint {
 
     @GET
