@@ -1,6 +1,6 @@
 thorntail:
   http:
-    port: 8081
+    port: 8080
   management:
     http:
-      port: 9991
+      port: 9990
