@@ -90,7 +90,7 @@
                                     </inline>
                                 </assembly>
                                 <entryPoint>
-                                    <shell>java -jar /opt/${project.artifactId}-thorntail.jar -Xmx256M -S$THORNTAIL_PROFILE</shell>
+                                    <shell>java -jar /opt/${project.artifactId}-thorntail.jar -Xmx256M -S$THORNTAIL_PROFILE -Djava.net.preferIPv4Stack=true</shell>
                                 </entryPoint>
                             </build>
                         </image>
