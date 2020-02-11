@@ -1,6 +1,7 @@
 package fr.batigere.contactsmgmt.rest;
 
 import fr.batigere.contactsmgmt.rest.dtos.Contact;
+import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.opentracing.Traced;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -18,6 +19,7 @@ public class ContactsEndpoint {
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
+    @Counted(absolute = true, description = "Get All Contacts")
     public List<Contact> getAllContacts(){
         Contact c1 = new Contact();
         c1.setId("1");
@@ -52,6 +54,7 @@ public class ContactsEndpoint {
     @GET
     @Path("/{username}")
     @Produces(MediaType.APPLICATION_JSON)
+    @Counted(absolute = true, description = "Get contact by ID")
     public Contact getContactById(@PathParam("username") String userName){
         Contact c2 = new Contact();
         c2.setId("1");
